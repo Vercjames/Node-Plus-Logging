@@ -213,19 +213,11 @@ module.exports = class Logging {
           return `${ctx.bold[this.colors.alerts](str)}`;
         case 'debugs':
           return `${ctx.bold[this.colors.debugs](str)}`;
-        case 'normal':
-          if ( this.colors.normal === null) {
-            return str
-          }
-          return `${ctx.bold[this.colors.normal](str)}`;
         default:
-          if ( values.type !== null && values.type !== 'default' && values.type) {
-            return `${ctx.bold[this.colors.others](str)}`;
+          if (ref.color) {
+            return `${ctx.bold[ref.color](str)}`
           }
-          if ( this.colors.default === null) {
-            return str
-          }
-          return `${ctx.bold[this.colors.default](str)}`;
+          return str
       }
     }
     if(ref.color === true) {
