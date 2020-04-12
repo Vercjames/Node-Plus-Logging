@@ -214,10 +214,7 @@ module.exports = class Logging {
         case 'debugs':
           return `${ctx.bold[this.colors.debugs](str)}`;
         default:
-          if (ref.color) {
-            return `${ctx.bold[ref.color](str)}`
-          }
-          return str
+          break
       }
     }
     if(ref.color === true) {
