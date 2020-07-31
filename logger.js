@@ -123,9 +123,9 @@ module.exports = class Logging {
     this.colors.normal = (config.colors && config.colors.normal ? config.colors.normal : null);
 
     this.settings = {};
-    this.settings.rid = (config.settings && config.settings.rid ? config.settings.rid : true);
-    this.settings.log = (config.settings && config.settings.log ? config.settings.show : true);
-    this.settings.save = (config.settings && config.settings.save ? config.settings.save : true);
+    this.settings.rid = (config.settings && config.settings.rid ? config.settings.rid : false);
+    this.settings.log = (config.settings && config.settings.log ? config.settings.log : false);
+    this.settings.save = (config.settings && config.settings.save ? config.settings.save : false);
     this.settings.location = (config.settings && config.settings.location ? config.settings.location : `./logs/`);
 
     this.order = {};

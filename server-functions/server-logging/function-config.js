@@ -80,6 +80,9 @@ module.exports = {
     }
   },
   settings: {
+    rid: true,
+    log: true,
+    save: false,
     location: './server-functions/server-logging/',
   },
   colors: {
